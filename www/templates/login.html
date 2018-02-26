@@ -1,0 +1,54 @@
+<ion-view hide-nav-bar="true" hide-back-button="true" class="login">
+  <ion-content class="padding">
+    <div class="page-block">
+      <div class="logo-block">
+        <img src="img/ionic.png" alt="">
+        <h2>Ionic</h2>
+      </div>
+      <form ng-submit="login(user)">
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input type="text" placeholder="Username" name="username" ng-model="user.username" required>
+          </label>
+          <label class="item item-input">
+            <input type="password" placeholder="Password" name="password" ng-model="user.password" required>
+          </label>
+        </div>
+        <button type="submit" class="button button-full button-positive" ng-disabled="loginCtrl.submitted">
+          Login
+        </button>
+      </form>
+      <p class="text-center">
+        <a ui-sref="reset">Forgot password?</a>
+      </p>
+    </div>
+  </ion-content>
+</ion-view>
+
+
+<!--
+<ion-view title="Log In" ng-controller="LoginCtrl">
+  <ion-content>
+    <ion-list>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Username</span>
+        <input type="text" placeholder="Username" id="username" ng-model="user.username">
+      </label>
+      <label class="item item-input item-floating-label ">
+        <span class="input-label">Password</span>
+        <input type="password" placeholder="Password" id="password" ng-model="user.password">
+      </label>
+      <label class="item item-input item-floating-label ">
+        <span class="input-label">Email</span>
+        <input type="email" placeholder="Email" id="email" ng-model="user.email">
+      </label>
+      <button class="button button-block button-balanced" ng-click="login(user)">
+        LOG IN
+      </button>
+      <button class="button button-block button-clear" id="forgot-button" ui-sref="reset">
+        FORGOT PASSWORD ?
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-view>
+-->

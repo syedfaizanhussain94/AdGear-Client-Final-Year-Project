@@ -1,0 +1,21 @@
+<ion-view title="Videos" hide-back-button="true">
+  <ion-content>
+    <div class="padding text-center" ng-if="isLoading">
+      <ion-spinner></ion-spinner>
+    </div>
+    <div class="padding text-center" ng-if="!isLoading && videos.length == 0">
+      No Videos
+    </div>
+    <ion-list ng-if="!isLoading">
+      <ion-item ng-repeat="v in videos track by $index"
+                ng-click="selectVideo(v)"
+                class="item-thumbnail-left item-icon-right c-remove-animate">
+        <img src="img/thumb.png">
+        <h2>{{v.name|| 'Untitled'}}</h2>
+        <p>{{v.location.latitude}},{{v.location.longitude}}</p>
+        <p ng-if="v.played">Played</p>
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

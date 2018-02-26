@@ -1,0 +1,30 @@
+.login, .register {
+  .page-block {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    right: 0;
+    top: 50%;
+    max-width: 350px;
+    width: 100%;
+    min-width: 200px;
+  }
+  .logo-block {
+    text-align: center;
+    margin-bottom: 30px;
+    img {
+      max-width: 100px;
+      width: 100%;
+    }
+    h2 {
+      margin: 0;
+      font-size: 24px;
+      color: $positive;
+    }
+  }
+  form {
+  }
+  a {
+    color: $positive;
+  }
+}

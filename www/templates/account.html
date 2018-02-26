@@ -1,0 +1,12 @@
+<ion-view view-title="Account" class="account" hide-back-button="true">
+  <ion-content>
+    <div class="user-block">
+      <img ng-src="{{user.image_src ? user.image_src : 'img/avatar.png'}}">
+      <h2>{{user.fn + ' ' + user.ln}}</h2>
+      <p>{{user.email}}</p>
+    </div>
+    <div class="padding">
+      <button class="button button-full button-assertive" ng-click="logout()">Logout</button>
+    </div>
+  </ion-content>
+</ion-view>

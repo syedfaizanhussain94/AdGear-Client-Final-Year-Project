@@ -1,0 +1,8 @@
+<ion-view title="Video" cache-view="false">
+  <ion-content>
+    <vjs-video-container vjs-ratio="4:3" ng-if="video">
+      <video class="video-js vjs-default-skin" autoplay controls preload="auto"
+             ng-src="{{trustSrc(video.url)}}"></video>
+    </vjs-video-container>
+  </ion-content>
+</ion-view>
